@@ -1,4 +1,4 @@
-package com.pluspark.basic_tensorflow
+package com.bluesky.basic_tensorflow
 
 import org.junit.Test
 

@@ -1,4 +1,4 @@
-package com.pluspark.basic_tensorflow
+package com.bluesky.basic_tensorflow
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4
