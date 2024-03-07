@@ -1,10 +1,11 @@
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
+    id 'androidx.navigation.safeargs'
 }
 
 android {
-    namespace 'com.pluspark.basic_tensorflow'
+    namespace 'com.bluesky.basic_tensorflow'
     compileSdk 34
 
     defaultConfig {
@@ -30,6 +31,9 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+    viewBinding{
+        enabled = true
+    }
 }
 
 dependencies {
@@ -41,4 +45,27 @@ dependencies {
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+
+    // CameraX core library
+    def camerax_version = '1.1.0-beta03'
+    implementation "androidx.camera:camera-core:$camerax_version"
+    // CameraX Camera2 extensions
+    implementation "androidx.camera:camera-camera2:$camerax_version"
+
+    // CameraX Lifecycle library
+    implementation "androidx.camera:camera-lifecycle:$camerax_version"
+
+    // CameraX View class
+    implementation "androidx.camera:camera-view:$camerax_version"
+
+    //WindowManager
+    implementation 'androidx.window:window:1.0.0-alpha09'
+
+    def nav_version = "2.3.5"
+    implementation "androidx.navigation:navigation-fragment-ktx:$nav_version"
+    implementation "androidx.navigation:navigation-ui-ktx:$nav_version"
+
+    implementation 'org.tensorflow:tensorflow-lite-task-vision-play-services:0.4.2'
+    implementation 'com.google.android.gms:play-services-tflite-gpu:16.0.0'
+
 }
