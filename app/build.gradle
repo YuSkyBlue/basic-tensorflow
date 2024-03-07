@@ -6,6 +6,7 @@ plugins {
 android {
     namespace 'com.pluspark.basic_tensorflow'
     compileSdk 34
+    buildToolsVersion '28.0.3'
 
     defaultConfig {
         applicationId "com.pluspark.basic_tensorflow"
@@ -33,6 +34,8 @@ android {
 }
 
 dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'org.tensorflow:tensorflow-android:1.13.1'
 
     implementation 'androidx.core:core-ktx:1.9.0'
     implementation 'androidx.appcompat:appcompat:1.6.1'
